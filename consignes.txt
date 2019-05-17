@@ -1,0 +1,21 @@
+Exercice :
+Vous devrez créer une petite app qui permet de lister les héros Marvel et DC
+
+Demandes utilisateurs :
+- En tant qu'utilisateur je veux avoir accès à la liste des personnages de chaque camps afin de pouvoir voir l'ensemble des personnages
+- En tant qu'utilisateur je veux avoir accès aux détails de chaque personnage afin d'en connaitre les détails d'apparition des personnages
+- En tant qu'utilisateur je veux pouvoir ajouter, modifier, ou supprimer un personnage afin de tenir les listes à jour 
+
+Bonus:
+- En tant qu'utilisateur je veux pouvoir avoir accès à une version FR et une version EN de l'application afin de pouvoir la partager dans le monde 
+
+Recommandations techniques :
+- Vue.js 2
+- Vous travaillerez en multi-composants que vous essayerez d'optimiser
+- Pour le style vous être libre d'utiliser ce que vous souhaitez (Mais si vous êtes amenés à utiliser Vuetify ça pourrait être cool allez savoir ;) )
+- Pour la mise en page vous êtes libre de faire ce qu'il vous plait aussi
+
+Bonus techniques:
+- Vous devrez utiliser le store de Vue.js
+- Vous pourrez créer différentes url sur l'application en utilisant de rooter de Vue.js
+- Pour la traduction vous utiliserez vue i18n
