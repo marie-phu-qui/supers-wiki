@@ -1,4 +1,4 @@
-Vue.component('button-counter', {
+Vue.component('home', {
   data: function () {
     return {
       count: 0

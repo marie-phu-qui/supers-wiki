@@ -1,16 +1,16 @@
 <template>
   <div>
-    <button-counter></button-counter>
+    <home></home>
   </div>  
 </template>
 
 <script>
 
-  import Button-counter from './Button-counter.vue'
+  import Home from './Home.vue'
   export default {
   	
     components: {
-      'button-counter': Button-counter
+      'home': Home
     }
     
  }   
