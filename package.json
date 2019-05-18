@@ -2,7 +2,7 @@
   "name": "supers-wiki",
   "version": "1.0.0",
   "description": "A VueJS app to look up MCU and DC heros ",
-  "main": "index.js",
+  "main": "App.vue",
   "repository": "https://github.com/marie-phu-qui/supers-wiki.git",
   "author": "marie <marie.nguyen.phu.qui@gmail.com>",
   "license": "MIT",

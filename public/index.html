@@ -1,14 +1,26 @@
+<!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" href="index.css">
-        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <title>Supers Wiki</title>
     </head>
     <body>
         
         <div id="app">
-            {{ content }}
+<!-- Home page on click will render list of supers heros par Universe-->
+            <h1>{{universe}}</h1>
+
+            <li>{{superhero}}</li>
+<!-- on click will render supers heros specific characteristics component-->
+            <p>
+                {{publisher}} 
+                {{alter_ego}}
+                {{first_appearance}}
+                {{characters}}
+            </p>
         </div>
-        
-        <script src="../index.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="main.js"></script>
     </body>
 </html>
