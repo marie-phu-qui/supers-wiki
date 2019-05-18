@@ -1,0 +1,17 @@
+{
+  "name": "supers-wiki",
+  "version": "1.0.0",
+  "description": "A VueJS app to look up MCU and DC heros ",
+  "main": "index.js",
+  "repository": "https://github.com/marie-phu-qui/supers-wiki.git",
+  "author": "marie <marie.nguyen.phu.qui@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "vue-cli": "^2.9.6",
+    "vuetify": "^1.5.14",
+    "webpack": "^4.31.0"
+  },
+  "devDependencies": {
+    "vue-router": "^3.0.6"
+  }
+}

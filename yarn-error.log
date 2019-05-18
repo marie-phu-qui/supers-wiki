@@ -1,0 +1,44 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js init
+
+PATH: 
+  C:\Users\Marie\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Marie\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Users\Marie\AppData\Local\Programs\Python\Python37\Scripts;C:\Users\Marie\AppData\Local\Programs\Python\Python37;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\dotnet;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin;C:\Program Files\nodejs;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files (x86)\GnuPG\bin;C:\Users\Marie\Environment Application\swigwin-3.0.12;C:\Program Files\nodejs\npm;C:\Users\Marie\AppData\Local\Programs\Python\Python37\lib\site-packages\metis.py;C:\Program Files\7-Zip;C:\Users\Marie\Environment Application\ffmpeg\ffmpeg-4.1.1-win64-static\bin;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Git;C:\Users\Marie\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Anaconda3 (64-bit);C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Users\Marie\AppData\Local\Programs\Python\Python37\Scripts;C:\Users\Marie\AppData\Local\Programs\Python\Python37;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\dotnet;C:\Program Files\Git\cmd;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Yarn\bin;C:\Program Files\nodejs;C:\Program F;C:\Users\Marie\Environment Application\ffmpeg\ffmpeg-4.1.1-win64-static\bin;C:\Users\Marie\Environment Application\wget;C:\Program Files\7-Zip;C:\Users\Marie\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Anaconda3 (64-bit);C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Git;C:\Users\Marie\Environment Application\Anaconda3\Scripts;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.10.1
+
+Node version: 
+  10.11.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:116426:13)
+      at Interface.emit (events.js:182:13)
+      at Interface._ttyWrite (readline.js:783:16)
+      at ReadStream.onkeypress (readline.js:168:10)
+      at ReadStream.emit (events.js:182:13)
+      at emitKeys (internal/readline.js:424:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1022:36)
+      at ReadStream.emit (events.js:182:13)
+      at addChunk (_stream_readable.js:283:12)
+
+npm manifest: 
+  {
+    "name": "supers-wiki",
+    "version": "1.0.0",
+    "description": "A VueJS app to look up MCU and DC heros ",
+    "main": "index.js",
+    "repository": "https://github.com/marie-phu-qui/supers-wiki.git",
+    "author": "marie <marie.nguyen.phu.qui@gmail.com>",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
