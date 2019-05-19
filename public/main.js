@@ -24,9 +24,11 @@ Vue.component('home', {
           super_list: '../data/dc.json'
         }
       },
+      chosen_universe: 'none'
   }},
   methods : {
     displayUniverse : function(e) {
+      console.log("click", e.target.id)
       this.chosen_universe = e.target.id
     },
   }
@@ -38,25 +40,24 @@ Vue.component('home', {
 var app = new Vue({
     el: '#app',
     data : {
-      universe : {
-        marvel : {
-          name : 'MARVEL',
-          image: '../data/img/MARVEL.jpg',
-          super_list: '../data/marvel.json'
-        },
-        DC : {
-          name: 'DC',
-          image: '../data/img/DC.jpg',
-          super_list: '../data/dc.json'
-        }
-      },
+    //   universe : {
+    //     marvel : {
+    //       name : 'MARVEL',
+    //       image: '../data/img/MARVEL.jpg',
+    //       super_list: '../data/marvel.json'
+    //     },
+    //     DC : {
+    //       name: 'DC',
+    //       image: '../data/img/DC.jpg',
+    //       super_list: '../data/dc.json'
+    //     }
+    //   },
       link:'https://www.dccomics.com/',
       superhero: 'SUPER',
       publisher: '1',
       alter_ego: '2',
       first_appearance: '3',
       characters:'4',
-      chosen_universe: 'none',
     },
     methods : {
       displayUniverse : function(e) {
