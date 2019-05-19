@@ -1,5 +1,4 @@
 Vue.component('home', {
-
   template: `
   <div id="homepage">
     <div v-for="key in universe" class="universe">
@@ -34,7 +33,26 @@ Vue.component('home', {
   }
 })
 
-
+Vue.component('supers-list', {
+  template: `
+  <div class="supers-list">
+    <!-- will be displaying img of superheros google img search https://www.googleapis.com/customsearch/v1?key=YOUR_API_KEY&cx=YOUR_CSE_ID&q={{superhero}}&searchType=image&fileType=jpg&imgSize=small&alt=json -->
+    <!-- src= google api.link v-for="super in data" -->
+    <img src="">
+    <a :href="superhero"><ul >{{superhero}}</ul></a>
+  </div>
+  `,
+  data() { 
+    return {
+      superhero: 'SUPER',
+  }},
+  // methods : {
+    
+  // //   },
+  // computed : {
+    
+  // }
+})
 
 
 var app = new Vue({
