@@ -63,24 +63,20 @@ var app = new Vue({
       },
       link:'https://www.dccomics.com/',
       superhero: 'SUPER',
-      publisher: 'super',
-      alter_ego: 'super',
-      first_appearance: 'super',
-      characters:'super',
+      publisher: '1',
+      alter_ego: '2',
+      first_appearance: '3',
+      characters:'4',
       chosen_universe: 'none',
     },
     methods : {
       displayUniverse : function(e) {
-        console.log (e.target.id, this.chosen_universe)
         this.chosen_universe = e.target.id
       },
-      defineID : function() {
-        console.log(document.getElementsByTagName(button).innerHTML)
-      }
     },
     computed : {
-      title() {
-        return this.superhero + ' ' + this.publisher
+      description() {
+        return this.superhero + ' ' + this.publisher + ' ' + this.alter_ego + ' ' + this.first_appearance + ' ' + this.characters
       }
     }
     // render: h => h(App)
