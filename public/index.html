@@ -8,13 +8,12 @@
         
         <div id="app">
 
-            <home></home>
+            <p>Universe : {{universe}}</p>
 
-            <supers-list></supers-list>
-
+            <home @display-universe="updateUniverse"></home>
+            <supers-list :universe="universe"></supers-list>
             <super-profile></super-profile>
-                
-            
+                            
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

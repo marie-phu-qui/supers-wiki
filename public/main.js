@@ -27,17 +27,24 @@ Vue.component('home', {
   }},
   methods : {
     displayUniverse : function(e) {
-      console.log("click", e.target.id)
       this.chosen_universe = e.target.id
+      this.$emit('display-universe', e.target.id)
     },
   }
 })
 
 Vue.component('supers-list', {
+  props: {
+    universe:{
+      type: String,
+      required: true
+    }
+  },
   template: `
   <div class="supers-list">
     <!-- will be displaying img of superheros google img search https://www.googleapis.com/customsearch/v1?key=YOUR_API_KEY&cx=YOUR_CSE_ID&q={{superhero}}&searchType=image&fileType=jpg&imgSize=small&alt=json -->
     <!-- src= google api.link v-for="super in data" -->
+    <p>Universe is : {{universe}}</p>
     <img src="">
     <a :href="superhero"><ul >{{superhero}}</ul></a>
   </div>
@@ -86,5 +93,14 @@ Vue.component('super-profile', {
 
 
 var app = new Vue({
-    el: '#app'
+    el: '#app',
+    data: {
+      universe: 'DC'
+    },
+    methods : {
+      updateUniverse(universe) {
+        console.log(universe)
+        this.universe = universe
+      }
+   },
   })
