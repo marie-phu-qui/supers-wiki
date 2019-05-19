@@ -55,37 +55,36 @@ Vue.component('supers-list', {
 })
 
 
-var app = new Vue({
-    el: '#app',
-    data : {
-    //   universe : {
-    //     marvel : {
-    //       name : 'MARVEL',
-    //       image: '../data/img/MARVEL.jpg',
-    //       super_list: '../data/marvel.json'
-    //     },
-    //     DC : {
-    //       name: 'DC',
-    //       image: '../data/img/DC.jpg',
-    //       super_list: '../data/dc.json'
-    //     }
-    //   },
-      link:'https://www.dccomics.com/',
+Vue.component('super-profile', {
+  template: `
+  <!-- last route with details per one heros-->
+  <div class="super">
+    <h1>{{superhero}}</h1>
+    <p>
+        {{description}}
+    </p>
+  </div>
+  `,
+  data() { 
+    return {
       superhero: 'SUPER',
       publisher: '1',
       alter_ego: '2',
       first_appearance: '3',
       characters:'4',
-    },
-    methods : {
-      displayUniverse : function(e) {
-        this.chosen_universe = e.target.id
-      },
-    },
-    computed : {
-      description() {
-        return this.superhero + ' ' + this.publisher + ' ' + this.alter_ego + ' ' + this.first_appearance + ' ' + this.characters
-      }
+  }},
+  // methods : {
+    
+  // //   },
+  computed : {
+    description() {
+      return this.superhero + ' ' + this.publisher + ' ' + this.alter_ego + ' ' + this.first_appearance + ' ' + this.characters
     }
-    // render: h => h(App)
+  }
+})
+
+
+
+var app = new Vue({
+    el: '#app'
   })
