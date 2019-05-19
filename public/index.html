@@ -7,7 +7,41 @@
     <body>
         
         <div id="app">
-            
+            <!-- Home page on click will render list of super heros par Universe-->
+            <div>
+                <div class="universe">
+                    <!-- on click display chosen universe name - will redirect to page -->
+                    <button v-on:click="chosen_universe = universe.marvel.name">{{universe.marvel.name}}</button>
+                    <h1>You are in {{chosen_universe}}</h1>
+                    <a :href="universe"></a><img class="universe-img" :src="universe.marvel.image">
+                </div>
+
+                <div class="universe">
+                    <!-- on click display chosen universe name - will redirect to page -->
+                    <button v-on:click="chosen_universe = universe.DC.name">{{universe.DC.name}}</button>
+                    <h1>You are in {{chosen_universe}}</h1>
+                    <a :href="universe"></a><img class="universe-img" :src="universe.DC.image">
+                </div>
+                
+                    <!-- on click will render supers heros specific characteristics component-->
+                <div class="super-list">
+                    <!-- will be displaying img of superheros google img search https://www.googleapis.com/customsearch/v1?key=YOUR_API_KEY&cx=YOUR_CSE_ID&q={{superhero}}&searchType=image&fileType=jpg&imgSize=small&alt=json -->
+                    <!-- src= google api.link -->
+                    <img src="">
+                    <a :href="superhero"><li>{{title}}</li></a>
+                </div>
+                
+                <!-- last route with details per one heros-->
+                <div class="super">
+                <h1>{{superhero}}</h1>
+                <p>
+                    {{publisher}} 
+                    {{alter_ego}}
+                    {{first_appearance}}
+                    {{characters}}
+                </p>
+                </div>
+            <div>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
