@@ -10,6 +10,8 @@
 
             <p>Universe : {{universe}}</p>
 
+            {{info}}
+
             <home @display-universe="updateUniverse"></home>
             <supers-list :universe="universe"></supers-list>
             <super-profile></super-profile>
@@ -18,6 +20,6 @@
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <script src="main.js"></script>
+        <script src="../client/main.js"></script>
     </body>
 </html>

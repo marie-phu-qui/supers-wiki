@@ -1,3 +1,5 @@
+
+
 Vue.component('home', {
   template: `
   <div id="homepage">
@@ -27,6 +29,7 @@ Vue.component('home', {
   }},
   methods : {
     displayUniverse : function(e) {
+      console.log(dc)
       this.chosen_universe = e.target.id
       this.$emit('display-universe', e.target.id)
     },
@@ -151,11 +154,15 @@ Vue.component('super-form', {
     }
   }
 })
-
 var app = new Vue({
     el: '#app',
     data: {
       universe: 'DC'
+    },
+    mounted () {
+      axios
+        .get('https://api.coindesk.com/v1/bpi/currentprice.json')
+        .then(response => (this.info = response))
     },
     methods : {
       updateUniverse(universe) {
