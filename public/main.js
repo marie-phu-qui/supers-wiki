@@ -47,15 +47,21 @@ Vue.component('supers-list', {
     <p>Universe is : {{universe}}</p>
     <img src="">
     <a :href="superhero"><ul >{{superhero}}</ul></a>
+    
+    <h4>Missing your fav super? Add it here</h4>
+    <super-form @superhero-added="addSuper"></super-form>
   </div>
   `,
   data() { 
     return {
       superhero: 'SUPER',
   }},
-  // methods : {
-    
-  // //   },
+  methods : {
+    addSuper(newSuper){
+      console.log("there there")
+      this.data.push(newSuper)
+    }
+  }
   // computed : {
     
   // }
@@ -90,7 +96,61 @@ Vue.component('super-profile', {
   }
 })
 
-
+Vue.component('super-form', {
+  template: `
+  <form class="super-form" @submit.prevent>
+    <p>
+      <label for="superhero">Superhero:</label>
+      <input id="superhero" v-model="superhero">
+    </p>
+    <p>
+      <label for="publisher">Publisher:</label>
+      <input id="publisher" v-model="publisher">
+    </p>
+    <p>
+      <label for="alter_ego">Alter ego:</label>
+      <input id="alter_ego" v-model="alter_ego">
+    </p>
+    <p>
+      <label for="first_appearance">First appearance:</label>
+      <input id="first_appearance" v-model="first_appearance">
+    </p>
+    <p>
+      <label for="characters">Chartacters:</label>
+      <input id="characters" v-model="characters">
+    </p>
+    
+    <p>
+      <input type="submit" value="Submit">
+    </p>
+  </form>
+  `,
+  data() { 
+    return {
+      superhero: null,
+      publisher: null,
+      alter_ego: null,
+      first_appearance: null,
+      characters:null
+  }},
+  methods : {
+    onSubmit() {
+      let newSuper = {
+        superhero : this.superhero,
+        publisher: this.publisher,
+        alter_ego: this.alter_ego,
+        first_appearance: this.first_appearance,
+        characters: this.characters,
+        }
+      this.$emit('superhero-added', newSuper)
+      this.superhero = null,
+      this.publisher = null,
+      this.alter_ego = null,
+      this.first_appearance = null,
+      this.characters =null
+    }
+  }
+})
 
 var app = new Vue({
     el: '#app',
@@ -99,7 +159,6 @@ var app = new Vue({
     },
     methods : {
       updateUniverse(universe) {
-        console.log(universe)
         this.universe = universe
       }
    },
