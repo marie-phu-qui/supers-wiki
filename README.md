@@ -212,6 +212,8 @@ The app will be deployed!
 ```
 
 ## To Do
-* 
+* Most of this application is still to do as I struggled with compatibility on vue-cli.
+All that is up has been hard coded and hand spinned from scratch.
+The databases are not linking to the components yet. 
 
-
+Work in progress not v1.0 useable. Development stage. 

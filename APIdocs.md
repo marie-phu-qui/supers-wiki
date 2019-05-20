@@ -3,7 +3,7 @@ API documentation: CRUD
 
 # Request and response formats
 
-## POST /super-form/add
+## POST /super-form/add/super-form/add
 ### Request
 ```sh
     {
@@ -15,7 +15,7 @@ API documentation: CRUD
     }
 ```
 
-## POST /super-form/update
+## UPDATE /super-form/update
 ### Request
 ```sh
     {
