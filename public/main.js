@@ -101,7 +101,7 @@ Vue.component('super-form', {
   <form class="super-form" @submit.prevent>
     <p>
       <label for="superhero">Superhero:</label>
-      <input id="superhero" v-model="superhero">
+      <input id="superhero" v-model="superhero" required>
     </p>
     <p>
       <label for="publisher">Publisher:</label>
