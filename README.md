@@ -27,7 +27,7 @@ As a developper:
 
 
 ### Stretch
-  * I want to display a first google image response per superheros as a thumbnail in Super-List
+  * I want to display a first google image response per superheros as a thumbnail in Super-List ( using https://www.googleapis.com/customsearch/v1?key=YOUR_API_KEY&cx=YOUR_CSE_ID&q={{superhero}}&searchType=image&fileType=jpg&imgSize=small&alt=json)
   * I want to be using a many language option with i18m
   * I want to be using a smooth dymanic screen responsive UI (via Bootstrap)
   * I want to be using a all user friendly UX (all screens as mentionned before but also a all sights) 
