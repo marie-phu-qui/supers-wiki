@@ -2,6 +2,7 @@
 
 
 A superheroes wiki using vue.js 2. This is a simple CRUD application using two databases marvel.json and dc.json.
+MVP version built with @vue/cli will be under : [the vue-app folder](https://github.com/marie-phu-qui/supers-wiki/tree/master/vue-app)
 
 
 ## User Stories
