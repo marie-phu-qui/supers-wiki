@@ -6,8 +6,8 @@
         </p>
         <p>
         <label for="publisher">Publisher:</label>
-        <select id="publisher">
-            <option value="DC Comics">DC Comics</option>
+        <select v-model="publisher" id="publisher">
+            <option value="DC Comics" select="selected">DC Comics</option>
             <option value="Marvel Comics">Marvel Comics</option>
         </select>
         </p>
@@ -25,14 +25,12 @@
         </p>
         
         <p>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" @click="submit">
         </p>
     </form>   
 </template>
 
 <script>
-
-console.log("superform")
 
 export default {
     name: 'SuperForm',
@@ -45,21 +43,21 @@ export default {
         characters:null
     }},
     methods : {
-        onSubmit() {
-        console.log("click")
-        let newSuper = {
-            superhero : this.superhero,
-            publisher: this.publisher,
-            alter_ego: this.alter_ego,
-            first_appearance: this.first_appearance,
-            characters: this.characters,
-            }
-        this.$emit('superhero-added', newSuper)
-        this.superhero = null,
-        this.publisher = null,
-        this.alter_ego = null,
-        this.first_appearance = null,
-        this.characters =null
+        submit() {
+            let newSuper = {
+                superhero : this.superhero,
+                publisher: this.publisher,
+                alter_ego: this.alter_ego,
+                first_appearance: this.first_appearance,
+                characters: this.characters,
+                }
+            console.log(newSuper)
+            this.$emit('superhero-added', newSuper)
+            this.superhero = null,
+            this.publisher = null,
+            this.alter_ego = null,
+            this.first_appearance = null,
+            this.characters =null
         }
     }
 }
