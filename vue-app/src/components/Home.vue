@@ -2,12 +2,12 @@
   <div id="homepage">
     <h1> Home page </h1>
 
-    <div v-for:"universe in universes" v-bind:key="universe">
+    <div v-for:"universe in universes" v-bind:key="universe" @click="select_universe">
        <a>{{universe.name}}</a>
 
     
       <img class="universe-img" alt="universe logo" src="universe.image"  >
-      <Universe data="universe.super_list"/>
+      <Universe prop="universe.super_list"/>
     </div>
 
   </div>
@@ -15,10 +15,13 @@
 
 <script>
 import Universe from './Universe.vue'
+import DCData from '../data/dc.json'
+import MarvelData from '../data/marvel.json'
+
+console.log(DCData, MarvelData) 
 
 export default {
   name: 'Home',
-  props: ['universe'],
   data() { 
     return {
       universes : {
@@ -35,10 +38,18 @@ export default {
       },
       chosen_universe: 'none'
   }},
+  methods: {
+    select_universe(e) {
+      this.universe = e.target.key;
+    }
+  },
   components: {
     Universe
   }
 }
+
+console.log("hello")
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
