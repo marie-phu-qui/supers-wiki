@@ -218,4 +218,16 @@ All that is up has been hard coded and hand spinned from scratch.
 The databases are not linking to the components yet. 
 Need to find a good testing framework.
 
+* vue=app folder has been created with: 
+```sh
+vue create vue-app
+```
+or also working with (if having issues using having vue recognized which was my case) :
+```sh
+npx @vue/cli create vue-app
+```
+All that is up has been using the vue/cli template with server spinned on localhost.
+The databases are now linking to the Home component. 
+I still need to find a good testing framework.
+
 Work in progress not v1.0 useable. Development stage. 
