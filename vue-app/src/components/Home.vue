@@ -1,12 +1,15 @@
 <template>
-    <div id="homepage">
+  <div id="homepage">
     <h1> Home page </h1>
-    
-    <img class="universe-img" alt="DC logo" v-bind:src="dc-img" onclick="render <Universe/>" >
-    <img class="universe-img" alt="Marvel logo" v-bind:src="marvel-img" >
-    <Universe />
 
+    <div v-for:"universe in universes" v-bind:key="universe">
+       <a>{{universe.name}}</a>
+
+    
+      <img class="universe-img" alt="universe logo" src="universe.image"  >
+      <Universe data="universe.super_list"/>
     </div>
+
   </div>
 </template>
 
@@ -15,7 +18,23 @@ import Universe from './Universe.vue'
 
 export default {
   name: 'Home',
-  props: ['title'],
+  props: ['universe'],
+  data() { 
+    return {
+      universes : {
+        marvel : {
+          name : 'MARVEL',
+          image: '../data/img/MARVEL.jpg',
+          super_list: '../data/marvel.json'
+        },
+        DC : {
+          name: 'DC',
+          image: '../data/img/DC.jpg',
+          super_list: '../data/dc.json'
+        }
+      },
+      chosen_universe: 'none'
+  }},
   components: {
     Universe
   }

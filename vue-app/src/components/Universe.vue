@@ -1,10 +1,7 @@
 <template>
     <div id="Universe">
-    <h1> Universe </h1>
-    
-
+        <h1> Universe </h1>
     </div>
-  </div>
 </template>
 
 <script>

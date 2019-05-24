@@ -1,7 +1,8 @@
 <template>
   <div id="app">
+
     <img class="sml-img" alt="Vue logo" src="./data/img/ANON.jpg">
-    <Home marvel-img="../data/img/marvel.jpg" dc-img="../data/img/DC.jpg"/>
+    <Home "/>
   </div>
 </template>
 
