@@ -6,7 +6,10 @@
         </p>
         <p>
         <label for="publisher">Publisher:</label>
-        <input id="publisher" v-model="publisher">
+        <select id="publisher">
+            <option value="DC Comics">DC Comics</option>
+            <option value="Marvel Comics">Marvel Comics</option>
+        </select>
         </p>
         <p>
         <label for="alter_ego">Alter ego:</label>
@@ -43,6 +46,7 @@ export default {
     }},
     methods : {
         onSubmit() {
+        console.log("click")
         let newSuper = {
             superhero : this.superhero,
             publisher: this.publisher,
