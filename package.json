@@ -26,10 +26,12 @@
     "vue-axios": "^2.1.4",
     "vue-cli": "^2.9.6",
     "vuetify": "^1.5.14",
+    "vue-i18n": "8.11.2",
+    "vue-router": "^3.0.6",
+    "vuex-router-sync": "^5.0.0",
     "webpack": "^4.31.0"
   },
   "devDependencies": {
-    "vue-router": "^3.0.6",
     "webpack-cli": "^3.3.2"
   }
 }
