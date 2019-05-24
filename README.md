@@ -214,7 +214,7 @@ The app will be deployed!
 
 ## To Do
 
-* vue=app folder has been created with: 
+* The vue-app folder has been created with cmds: 
 ```sh
 vue create vue-app
 ```
