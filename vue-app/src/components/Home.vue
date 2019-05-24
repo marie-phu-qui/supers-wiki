@@ -2,13 +2,21 @@
   <div id="homepage">
     <h1> Home page </h1>
 
-    <div v-for:"universe in universes" v-bind:key="universe" @click="select_universe">
-       <a>{{universe.name}}</a>
+    <div v-for="universe in universes">
 
-    
-      <img class="universe-img" alt="universe logo" src="universe.image"  >
-      <Universe prop="universe.super_list"/>
+      <h2> {{universe.name}}</h2>
+
+      <a :href="universe.name"><img class="universe-img" :src="universe.image" ></a>\\
+
+      <h3>Heroes List</h3>
+      <div class="super-list" v-for="heros in universe.super_list">
+        
+        <h4> {{heros.superhero}} </h4>
+        <p>Connu à l'état civil sous le nom de {{heros.alter_ego}}. {{heros.superhero}} a fait sa première apparition dans l'univers {{heros.publisher}} pour la première fois dans {{heros.first_appearance}}. Ses alias sont {{heros.characters}}.</p>
+      </div>
+
     </div>
+
 
   </div>
 </template>
@@ -28,12 +36,12 @@ export default {
         marvel : {
           name : 'MARVEL',
           image: '../data/img/MARVEL.jpg',
-          super_list: '../data/marvel.json'
+          super_list: MarvelData
         },
         DC : {
           name: 'DC',
           image: '../data/img/DC.jpg',
-          super_list: '../data/dc.json'
+          super_list: DCData
         }
       },
       chosen_universe: 'none'
