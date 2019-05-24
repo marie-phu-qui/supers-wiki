@@ -1,6 +1,7 @@
 <template>
   <div id="homepage">
-    <h1> Home page </h1>
+    <SuperForm />
+    <h1> Supers Wiki home page </h1>
 
     <div v-for="universe in universes">
 
@@ -17,12 +18,11 @@
 
     </div>
 
-
   </div>
 </template>
 
 <script>
-import Universe from './Universe.vue'
+import SuperForm from './SuperForm.vue'
 import DCData from '../data/dc.json'
 import MarvelData from '../data/marvel.json'
 
@@ -52,7 +52,7 @@ export default {
     }
   },
   components: {
-    Universe
+    SuperForm
   }
 }
 

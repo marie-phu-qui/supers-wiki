@@ -3,7 +3,7 @@
 Vue.component('home', {
   template: `
   <div id="homepage">
-    <div v-for="key in universe" class="universe">
+  <div v-for="key in universe" class="universe">
     <!-- on click display chosen universe name - will redirect to page -->
     <button :id="key.name" v-on:click="displayUniverse">{{key.name}}</button>
     <h1>You are in {{chosen_universe}}</h1>

@@ -1,0 +1,62 @@
+<template>
+    <form class="super-form" @submit.prevent>
+        <p>
+        <label for="superhero">Superhero:</label>
+        <input id="superhero" v-model="superhero" required>
+        </p>
+        <p>
+        <label for="publisher">Publisher:</label>
+        <input id="publisher" v-model="publisher">
+        </p>
+        <p>
+        <label for="alter_ego">Alter ego:</label>
+        <input id="alter_ego" v-model="alter_ego">
+        </p>
+        <p>
+        <label for="first_appearance">First appearance:</label>
+        <input id="first_appearance" v-model="first_appearance">
+        </p>
+        <p>
+        <label for="characters">Chartacters:</label>
+        <input id="characters" v-model="characters">
+        </p>
+        
+        <p>
+        <input type="submit" value="Submit">
+        </p>
+    </form>   
+</template>
+
+<script>
+
+console.log("superform")
+
+export default {
+    name: 'SuperForm',
+    data() { 
+        return {
+        superhero: null,
+        publisher: null,
+        alter_ego: null,
+        first_appearance: null,
+        characters:null
+    }},
+    methods : {
+        onSubmit() {
+        let newSuper = {
+            superhero : this.superhero,
+            publisher: this.publisher,
+            alter_ego: this.alter_ego,
+            first_appearance: this.first_appearance,
+            characters: this.characters,
+            }
+        this.$emit('superhero-added', newSuper)
+        this.superhero = null,
+        this.publisher = null,
+        this.alter_ego = null,
+        this.first_appearance = null,
+        this.characters =null
+        }
+    }
+}
+</script>
