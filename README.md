@@ -2,6 +2,7 @@
 
 
 A superheroes wiki using vue.js 2. This is a simple CRUD application using two databases marvel.json and dc.json.
+MVP version built with @vue/cli will be under : [the vue-app folder](https://github.com/marie-phu-qui/supers-wiki/tree/master/vue-app)
 
 
 ## User Stories
@@ -212,9 +213,31 @@ The app will be deployed!
 ```
 
 ## To Do
-* Most of this application is still to do as I struggled with compatibility on vue-cli.
-All that is up has been hard coded and hand spinned from scratch.
-The databases are not linking to the components yet. 
-Need to find a good testing framework.
+
+* The vue-app folder has been created with cmds: 
+```sh
+vue create vue-app
+```
+or also working with (if having issues using having vue recognized which was my case) :
+```sh
+npx @vue/cli create vue-app
+```
+All that is up has been using the vue/cli template with server spinned on localhost.
+The databases are now linking to the Home component. 
+
+
+To reach MVP :
+* I need to separate components to create multi components app. 
+  *  At the moment I have \<Home /> and \<SuperForm/ >. I wish to divide \<Home /> into sub components such as \<Universe /> and \<SuperProfile />.
+* I need to activate separate routes corresponding to indivial universe view.
+* I need my form to post data to relevant databases.
+* I need to add an update option.
+* I need to add a delete option.
+* I need to start testing the code as soon as possible.
+
+To add some streches :
+* I wish to spin up vue/i18n to make the app multilanguage.
+* I wish to solve my current non rendering of universes image.
+* I wish to use Google API to load superheros thumbnail picture.
 
 Work in progress not v1.0 useable. Development stage. 
