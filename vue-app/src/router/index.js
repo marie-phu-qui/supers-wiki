@@ -13,15 +13,17 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: Home
+      component: Home,
+      children: [
+        {
+            path: '/form',
+            name: 'Form',
+            component: Form
+        }
+      ]
     },
     {
-        path: '/form',
-        name: 'Form',
-        component: Form
-    },
-    {
-        path: '/universe:universe',
+        path: '/universes:universe',
         name: 'Universe',
         component: Universe
     }

@@ -27,6 +27,9 @@
         <p>
         <input type="submit" value="Submit" @click="submit">
         </p>
+
+        <router-link to="/">Fermer le formulaire</router-link>
+
     </form>   
 </template>
 

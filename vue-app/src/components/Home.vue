@@ -1,20 +1,18 @@
 <template>
   <div id="homepage">
 
-    <div id="form">
-    <router-link to="/form">Ajoute un superhero</router-link>
-    <router-view></router-view>
-    <router-link to="/">Retour</router-link>
-    </div>
-
-
     <h1> Supers Wiki home page </h1>
 
+    <div id=form>
+        <router-link to="/form">Ajoute un superhero</router-link>
+        <router-view></router-view>
+    </div>
+    
     <div v-for="universe in universes">
-
+    
       <h2> {{universe.name}}</h2>
 
-      <a :href="universe.name"><img class="universe-img" :src=universe.image ></a>
+      <router-link :to="universe.name"><img class="universe-img" :src=universe.image ></router-link>
 
       <h3>Heroes List</h3>
       <div class="super-list" v-for="heros in universe.super_list">
