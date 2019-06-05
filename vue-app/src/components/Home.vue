@@ -7,7 +7,7 @@
 
       <h2> {{universe.name}}</h2>
 
-      <a :href="universe.name"><img class="universe-img" :src="universe.image" ></a>\\
+      <a :href="universe.name"><img class="universe-img" :src=universe.image ></a>
 
       <h3>Heroes List</h3>
       <div class="super-list" v-for="heros in universe.super_list">
@@ -25,6 +25,9 @@
 import SuperForm from './SuperForm.vue'
 import DCData from '../data/dc.json'
 import MarvelData from '../data/marvel.json'
+import MarvelImg from '../data/img/MARVEL.jpg'
+import DCImg from '../data/img/DC.jpg'
+
 
 console.log(DCData, MarvelData) 
 
@@ -35,12 +38,12 @@ export default {
       universes : {
         marvel : {
           name : 'MARVEL',
-          image: '../data/img/MARVEL.jpg',
+          image: MarvelImg,
           super_list: MarvelData
         },
         DC : {
           name: 'DC',
-          image: '../data/img/DC.jpg',
+          image: DCImg,
           super_list: DCData
         }
       },
@@ -55,9 +58,6 @@ export default {
     SuperForm
   }
 }
-
-console.log("hello")
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
