@@ -1,6 +1,13 @@
 <template>
   <div id="homepage">
-    <SuperForm />
+
+    <div id="form">
+    <router-link to="/form">Ajoute un superhero</router-link>
+    <router-view></router-view>
+    <router-link to="/">Retour</router-link>
+    </div>
+
+
     <h1> Supers Wiki home page </h1>
 
     <div v-for="universe in universes">

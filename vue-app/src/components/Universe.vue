@@ -1,6 +1,6 @@
 <template>
-    <div id="Universe">
-        <h1> Universe </h1>
+    <div id="$route.params.universe">
+        <h1> {{$route.params.universe}} </h1>
 
         <SuperProfile />
 

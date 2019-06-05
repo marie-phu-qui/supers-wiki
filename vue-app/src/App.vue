@@ -2,14 +2,13 @@
   <div id="app">
 
     <img class="sml-img" alt="Home logo" src="./data/img/ANON.jpg">
-    
+
     <Home />
   </div>
 </template>
 
 <script>
 import Home from './components/Home.vue'
-
 
 export default {
   name: 'app',
